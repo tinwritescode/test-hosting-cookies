@@ -5,7 +5,6 @@ export const POST = async () => {
   const cookieStore = await cookies();
   cookieStore.delete("isLoggedIn");
 
-  // Access-Control-Allow-Origin
   const headersList = new Headers();
   headersList.set("Access-Control-Allow-Origin", "*");
 

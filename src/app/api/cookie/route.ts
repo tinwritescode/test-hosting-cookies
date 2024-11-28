@@ -6,7 +6,7 @@ export const POST = async () => {
   cookieStore.set("isLoggedIn", "true", {
     httpOnly: true,
     secure: true,
-    sameSite: "strict",
+    sameSite: "none",
   });
 
   const headersList = new Headers();
