@@ -1,4 +1,4 @@
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 export const POST = async () => {
@@ -9,7 +9,7 @@ export const POST = async () => {
     sameSite: "strict",
   });
 
-  const headersList = await headers();
+  const headersList = new Headers();
   headersList.set("Access-Control-Allow-Origin", "*");
 
   return NextResponse.json({ message: "Cookie set" }, { headers: headersList });
